@@ -55,7 +55,7 @@ jobs:
           APP_VERSION: ${{ github.sha }}
         # TODO 1: build và khởi động toàn bộ hệ thống bằng Docker Compose (đọc student.env),
         #         chờ các service sẵn sàng (gợi ý: --wait --wait-timeout 300)
-        run: docker compose --env-file student.env up -d --build --wait --wait-timeout 300
+        run: docker compose --env-file student.env up -d --build --wait --wait-timeout 600
 
       - name: Smoke test
         run: |
